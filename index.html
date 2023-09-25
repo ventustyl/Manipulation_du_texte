@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Texte Manipulation</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2557/2557759.png">
+</head>
+
+<body>
+    <h1>Manipulation du texte</h1>
+    <div class="tabs">
+        <button id="tab1" class="tab-button" onclick="openTab('tabContent1')">Compter le texte</button>
+        <button id="tab2" class="tab-button" onclick="openTab('tabContent2')">Générer du texte</button>
+    </div>
+    <div id="tabContent1" class="tab-content">
+        <textarea id="inputText" placeholder="Saisissez votre texte ici..."></textarea>
+        <button id="countButton" onclick="countText()">Compter</button>
+        <div id="countResult"></div>
+    </div>
+    <div id="tabContent2" class="tab-content">
+        <label for="generateType">Choisissez le type de génération :</label>
+        <select id="generateType">
+            <option value="character">Nombre de caractères</option>
+            <option value="word">Nombre de mots</option>
+            <option value="sentence">Nombre de phrases</option>
+            <option value="paragraph">Nombre de paragraphes</option>
+        </select>
+        <input type="number" id="generateCount" placeholder="Entrez la quantité...">
+        <button id="generateButton" onclick="generateText()">Générer</button>
+        <hr>
+        <div id="generatedText"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
